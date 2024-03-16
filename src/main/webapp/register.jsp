@@ -56,17 +56,17 @@
 </head>
 <body>
 <div>
-    <form action="#" method="post">
+    <form action="jdbc" method="post">
         <label><span>Name:</span><br>
-            <input type="text" value="Username" onfocus="this.value = '';" class = "x" onblur = "if (this.value === ''){this.value = 'Username'}"></label><br>
+            <input type="text" value="Username" name="Username" onfocus="this.value = '';" class = "x" onblur = "if (this.value === ''){this.value = 'Username'}"></label><br>
         <label><span>Password:</span><br>
-            <input type="password" minlength = "8" value="password" class = "x" onfocus="this.value = '';" onblur = "if (this.value === ''){this.value = 'Password'}"></label><br>
+            <input type="password" minlength = "8" value="password" name="password" class = "x" onfocus="this.value = '';" onblur = "if (this.value === ''){this.value = 'Password'}"></label><br>
         <label><span>Email:</span><br>
-            <input type="email" value="xxxx@xxx.xxx" class = "x" onfocus="this.value = '';" onblur = "if (this.value === ''){this.value = 'xxxx@xxx.xxx'}"></label><br>
+            <input type="email" value="xxxx@xxx.xxx" name="email" class = "x" onfocus="this.value = '';" onblur = "if (this.value === ''){this.value = 'xxxx@xxx.xxx'}"></label><br>
         <span class ="b">Gender:</span><br>
-        <label class = "c"><input type="radio" name = "sex">Male</label><label class = "c"><input type="radio" name = "sex">Female</label><br>
+        <label class = "c"><input type="radio" name = "sex" value="male">Male</label><label class = "c"><input type="radio" name = "sex" value="female">Female</label><br>
         <span class = "b">Birthday:</span><br>
-        <label><input type="date"></label><br>
+        <label><input type="date" name="data"></label><br>
         <input type="submit" class="a" value="Register">
     </form>
 </div>
