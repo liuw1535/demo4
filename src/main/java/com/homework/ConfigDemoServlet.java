@@ -29,8 +29,8 @@ public class ConfigDemoServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.print("<h1>Task 1-Get init parameters from web.xml</h1>");
         out.print("Name:" + name + "<br>" + "ID:" + id);
-//        out.print("<h1>Task 2-Get init parameters from @WebServlet</h1>");
-//        out.print("Name:" + name1 + "<br>" + "ID:" + id1);
+        out.print("<h1>Task 2-Get init parameters from @WebServlet</h1>");
+        out.print("Name:" + name1 + "<br>" + "ID:" + id1);
     }
 
     @Override
