@@ -20,12 +20,46 @@
         <servlet-name>work_1</servlet-name>
         <url-pattern>/work_1</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>com.homework.RegisterServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/jdbc</url-pattern>
-    </servlet-mapping>
+<!--    <servlet>-->
+<!--        <servlet-name>RegisterServlet</servlet-name>-->
+<!--        <servlet-class>com.homework.RegisterServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>RegisterServlet</servlet-name>-->
+<!--        <url-pattern>/jdbc</url-pattern>-->
+<!--    </servlet-mapping>-->
+<!--    <servlet>-->
+<!--        <servlet-name>ConfigDemoServlet</servlet-name>-->
+<!--        <servlet-class>com.homework.ConfigDemoServlet</servlet-class>-->
+<!--        <init-param>-->
+<!--            <param-name>ID</param-name>-->
+<!--            <param-value>2022211001000513</param-value>-->
+<!--        </init-param>-->
+<!--        <init-param>-->
+<!--            <param-name>name</param-name>-->
+<!--            <param-value>LiuWei</param-value>-->
+<!--        </init-param>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>ConfigDemoServlet</servlet-name>-->
+<!--        <url-pattern>/config</url-pattern>-->
+<!--    </servlet-mapping>-->
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/jsp_text</param-value>
+    </context-param>
+    <context-param>
+        <param-name>Username</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>Password</param-name>
+        <param-value>3481@wang</param-value>
+    </context-param>
 </web-app>
+
+

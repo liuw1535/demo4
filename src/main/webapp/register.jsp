@@ -56,7 +56,7 @@
 </head>
 <body>
 <div>
-    <form action="jdbc" method="post">
+    <form action="register" method="post">
         <label><span>Name:</span><br>
             <input type="text" value="Username" name="Username" onfocus="this.value = '';" class = "x" onblur = "if (this.value === ''){this.value = 'Username'}"></label><br>
         <label><span>Password:</span><br>
