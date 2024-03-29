@@ -1,16 +1,24 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: uisl
+  Date: 2024/3/20
+  Time: 19:36
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+    <title>Title</title>
 </head>
 <body>
-<h1><%= "Hello World!" %></h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
-<br/>
-<%
-  out.print("这是Java的内嵌输出信息");
-  %>
+<%@include file="header.jsp"%>
+<a href="config">Config.parameter-week4</a><br>
+<a href="Login.jsp">Login-week5</a><br>
+<a href="register.jsp">Register-getParameter-week3</a><br>
+<a href="hello-servlet">Hello Servlet-week1</a><br>
+<a href="register.jsp">Register JDBC-week4</a><br>
+<a href="index.jsp">include-week5</a><br>
+<a href="work_1">Student info Servlet-week2</a>
+<%@include file="footer.jsp"%>
 </body>
 </html>
