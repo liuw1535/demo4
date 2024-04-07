@@ -12,6 +12,17 @@
 </head>
 <body>
 <%@include file="header.jsp"%>
+<form action="SearchServlet" method="get" target="_blank">
+    <label>
+        <input type="text" name = "search" size="30">
+        <select name="engine">
+            <option value="baidu">Baidu</option>
+            <option value="bing">Bing</option>
+            <option value="google">Google</option>
+        </select>
+        <input type="submit" value="Search">
+    </label>
+</form>
 <a href="config">Config.parameter-week4</a><br>
 <a href="Login.jsp">Login-week5</a><br>
 <a href="register.jsp">Register-getParameter-week3</a><br>

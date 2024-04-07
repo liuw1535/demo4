@@ -58,11 +58,11 @@
 <div>
     <form action="register" method="post">
         <label><span>Name:</span><br>
-            <input type="text" value="Username" name="Username" onfocus="this.value = '';" class = "x" onblur = "if (this.value === ''){this.value = 'Username'}"></label><br>
+            <input type="text" name="Username" class = "x" placeholder="Username"></label><br>
         <label><span>Password:</span><br>
-            <input type="password" minlength = "8" value="password" name="password" class = "x" onfocus="this.value = '';" onblur = "if (this.value === ''){this.value = 'Password'}"></label><br>
+            <input type="password" minlength = "8" name="password" class = "x" placeholder="Password"></label><br>
         <label><span>Email:</span><br>
-            <input type="email" value="xxxx@xxx.xxx" name="email" class = "x" onfocus="this.value = '';" onblur = "if (this.value === ''){this.value = 'xxxx@xxx.xxx'}"></label><br>
+            <input type="email" name="email" class = "x" placeholder="xxxx@xxx.xx"></label><br>
         <span class ="b">Gender:</span><br>
         <label class = "c"><input type="radio" name = "sex" value="male">Male</label><label class = "c"><input type="radio" name = "sex" value="female">Female</label><br>
         <span class = "b">Birthday:</span><br>

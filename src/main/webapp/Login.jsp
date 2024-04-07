@@ -53,9 +53,9 @@
 <div>
     <form action="LoginServlet" method="post">
         <label><span>Name:</span><br>
-            <input type="text" value="Username" name="Username" onfocus="this.value = '';" class = "x" onblur = "if (this.value === ''){this.value = 'Username'}"></label><br>
+            <input type="text" name="Username" placeholder="Username" class = "x"></label><br>
         <label><span>Password:</span><br>
-            <input type="password" minlength = "8" value="password" name="password" class = "x" onfocus="this.value = '';" onblur = "if (this.value === ''){this.value = 'Password'}"></label><br>
+            <input type="password" minlength = "8" name="password" class = "x" placeholder="Password"></label><br>
         <label><span>Email:</span><br>
             <input type="submit" class="a" value="Login"></label>
     </form>

@@ -48,6 +48,7 @@ public class RegisterServlet extends HttpServlet {
 //                + "Sex:" + sex + "\n"
 //                + "Email:" + email + "\n" + "BirthData:" + data
 //        );
+        getServletContext().setAttribute("con",connection);
         try {
             String sql = "insert into usertable values (?,?,?,?,null)";
             PreparedStatement statement = connection.prepareStatement(sql);
@@ -57,20 +58,21 @@ public class RegisterServlet extends HttpServlet {
             statement.setString(3,email);
             statement.setString(4,data);
             statement.executeUpdate();
-            sql = "select * from usertable";
-            statement = connection.prepareStatement(sql);
-            ResultSet result = statement.executeQuery();
-            out.print("<table style = 'border-collapse: collapse;' border = '1'><tr><th>ID</th><th>Name</th><th>Password</th><th>Email</th><th>Birthday</th></tr>");
-            while (result.next())
-            {
-                password1 = result.getString("password");
-                name      = result.getString("name");
-                email1    = result.getString("email");
-                birthday  = result.getString("birthday");
-                id        = result.getInt("ID");
-                out.print("<tr><td>"+id+"</td><td>"+name+"</td><td>"+password1+"</td><td>"+email1+"</td><td>"+birthday+"</td></tr>");
-            }
-            out.print("</table>");
+            resp.sendRedirect("Login.jsp");
+//            sql = "select * from usertable";
+//            statement = connection.prepareStatement(sql);
+//            ResultSet result = statement.executeQuery();
+//            out.print("<table style = 'border-collapse: collapse;' border = '1'><tr><th>ID</th><th>Name</th><th>Password</th><th>Email</th><th>Birthday</th></tr>");
+//            while (result.next())
+//            {
+//                password1 = result.getString("password");
+//                name      = result.getString("name");
+//                email1    = result.getString("email");
+//                birthday  = result.getString("birthday");
+//                id        = result.getInt("ID");
+//                out.print("<tr><td>"+id+"</td><td>"+name+"</td><td>"+password1+"</td><td>"+email1+"</td><td>"+birthday+"</td></tr>");
+//            }
+//            out.print("</table>");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

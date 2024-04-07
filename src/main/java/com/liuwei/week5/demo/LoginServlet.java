@@ -14,23 +14,24 @@ import java.sql.*;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
     static Connection connection;
-    @Override
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        String driver = getServletContext().getInitParameter("driver");
-        String url = getServletContext().getInitParameter("url");
-        String username = getServletContext().getInitParameter("Username");
-        String password = getServletContext().getInitParameter("Password");
-        try {
-            Class.forName(driver);
-            connection = DriverManager.getConnection(url,username,password);
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    @Override
+//    public void init(ServletConfig config) throws ServletException {
+//        super.init(config);
+//        String driver = getServletContext().getInitParameter("driver");
+//        String url = getServletContext().getInitParameter("url");
+//        String username = getServletContext().getInitParameter("Username");
+//        String password = getServletContext().getInitParameter("Password");
+//        try {
+//            Class.forName(driver);
+//            connection = DriverManager.getConnection(url,username,password);
+//        } catch (ClassNotFoundException | SQLException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        connection =  (Connection) getServletContext().getAttribute("con");
         String sql = "select * from usertable where name = ? and password = ?";
         String username = req.getParameter("Username");
         String psd = req.getParameter("password");
