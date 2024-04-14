@@ -60,6 +60,9 @@
         <param-name>Password</param-name>
         <param-value>3481@wang</param-value>
     </context-param>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>
 
 

@@ -23,6 +23,7 @@
         <input type="submit" value="Search">
     </label>
 </form>
+<a href="QueryAllServlet">CheckAllUser-week7</a><br>
 <a href="config">Config.parameter-week4</a><br>
 <a href="Login.jsp">Login-week5</a><br>
 <a href="register.jsp">Register-getParameter-week3</a><br>
