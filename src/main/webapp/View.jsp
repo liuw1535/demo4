@@ -77,6 +77,10 @@
                 }
                 out.print("</table>");
             }
+            else
+            {
+                out.print("<tr><td>---</td><td>---</td><td>---</td><td>---</td><td>---</td></tr></table>");
+            }
         %>
 
 </html>

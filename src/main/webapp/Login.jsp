@@ -50,16 +50,46 @@
 </head>
 <body>
 <%@include file="header.jsp"%>
+<%!
+    String name = null;
+%>
+<%
+    Cookie[] cookies = request.getCookies();
+    for(int i = 0; i < cookies.length; i++)
+    {
+        if (cookies[i].getName().equals("username"))
+        {
+            name = cookies[i].getValue();
+        }
+    }
+%>
 <div>
     <form action="LoginServlet" method="post">
         <label><span>Name:</span><br>
-            <input type="text" name="Username" placeholder="Username" class = "x"></label><br>
+            <input type="text" name="Username" placeholder="Username" class = "x" value=<%=name != null ? name : ""%>  ></label><br>
         <label><span>Password:</span><br>
             <input type="password" minlength = "8" name="password" class = "x" placeholder="Password"></label><br>
-        <label><span>Email:</span><br>
-            <input type="submit" class="a" value="Login"></label>
+        <label>
+            <input type="submit" class="a" value="Login"></label><br>
+        <label><span>Remember me</span>
+            <input type="checkbox" value="false" name = "isRem">
+        </label>
     </form>
 </div>
+<script>
+    let checkbox = document.getElementsByName("isRem")[0];
+    checkbox.value = "false";
+    checkbox.addEventListener('change',function (){
+        if(this.checked)
+        {
+            this.value = "true";
+        }
+        else
+        {
+            this.value = "false";
+        }
+    });
+</script>
 <%@include file="footer.jsp"%>
 </body>
 </html>
