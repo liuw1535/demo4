@@ -15,7 +15,7 @@ public class LoginOutServlet extends HttpServlet {
         {
             session.invalidate();
         }
-        resp.sendRedirect("Login.jsp");
+        resp.sendRedirect("views/login.jsp");
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

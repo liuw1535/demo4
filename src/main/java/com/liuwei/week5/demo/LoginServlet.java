@@ -33,10 +33,10 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         connection =  (Connection) getServletContext().getAttribute("con");
         String sql = "select * from usertable where name = ? and password = ?";
-        String username = req.getParameter("Username");
+        String username = req.getParameter("name");
         String psd = req.getParameter("password");
         String isRem = req.getParameter("isRem");
-        Cookie cookie = new Cookie("username",username);
+        Cookie cookie = new Cookie("name",username);
         if (isRem == null)
         {
             cookie.setMaxAge(0);
@@ -74,11 +74,13 @@ public class LoginServlet extends HttpServlet {
                 String email = result.getString("email");
                 HttpSession session = req.getSession();
                 session.setAttribute("User",new User(username,psd,ID,birthday,email));
-                req.getRequestDispatcher("UserInfo.jsp").forward(req,resp);
+                //req.getRequestDispatcher("UserInfo.jsp").forward(req,resp);
+                resp.sendRedirect("views/index.jsp");
             }
             else
             {
-                resp.sendRedirect("Login.jsp");
+                //resp.sendRedirect("Login.jsp");
+                resp.sendRedirect("views/login.jsp");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
